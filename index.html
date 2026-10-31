@@ -109,7 +109,16 @@
       <p class="mode-hint" id="mode-hint" aria-live="polite">Elige una alternativa en cada pregunta y al final revisa tu puntaje.</p>
 
       <form class="quiz-form" id="quiz-form">
-        <p class="worksheet-meta"><span>Nombre: ____________________________________</span><span>Fecha: __________________</span></p>
+        <div class="worksheet-meta" aria-label="Datos del test">
+          <label class="worksheet-field">
+            <span>Nombre</span>
+            <input type="text" name="student-name" maxlength="80" placeholder="Escribe tu nombre" aria-label="Nombre del estudiante">
+          </label>
+          <label class="worksheet-field">
+            <span>Fecha</span>
+            <input type="date" name="quiz-date" aria-label="Fecha del test">
+          </label>
+        </div>
         <p class="quiz-instructions">Lee cada pregunta y marca una sola alternativa.</p>
 
         <ol class="question-list">
