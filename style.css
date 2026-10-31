@@ -271,6 +271,56 @@ h1 span {
   box-shadow: 0 8px 26px rgba(49, 73, 47, .055);
 }
 
+.discovery-dialog {
+  position: fixed;
+  width: min(425px, calc(100% - 32px));
+  max-width: none;
+  max-height: calc(100% - 32px);
+  margin: auto;
+  padding: 38px 12px 12px;
+  overflow: visible;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid #e4ecdc;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(38, 61, 50, .22);
+}
+
+.discovery-dialog::backdrop {
+  background: rgba(32, 48, 37, .52);
+  backdrop-filter: blur(3px);
+}
+
+.discovery-dialog .discovery-card {
+  min-height: 0;
+  max-width: none;
+  padding: 12px;
+  border: 0;
+  box-shadow: none;
+}
+
+.discovery-dialog-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  color: #53644e;
+  background: #f0f5e9;
+  border: 0;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.discovery-dialog-close:focus-visible {
+  outline: 3px solid #e7ae4c;
+  outline-offset: 2px;
+}
+
 .discovery-icon {
   display: grid;
   flex: 0 0 42px;

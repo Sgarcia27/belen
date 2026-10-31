@@ -80,6 +80,8 @@ const plantParts = {
 };
 
 const partButtons = document.querySelectorAll('.plant-part');
+const discoveryDialog = document.querySelector('#discovery-dialog');
+const closeDiscoveryButton = document.querySelector('#close-discovery');
 const cardLabel = document.querySelector('#card-label');
 const partTitle = document.querySelector('#part-title');
 const partDescription = document.querySelector('#part-description');
@@ -98,7 +100,18 @@ partButtons.forEach((button) => {
     partTitle.textContent = part.name;
     partDescription.textContent = part.description;
     discoveryIcon.textContent = part.icon;
+    discoveryDialog.showModal();
   });
+});
+
+closeDiscoveryButton.addEventListener('click', () => {
+  discoveryDialog.close();
+});
+
+discoveryDialog.addEventListener('click', (event) => {
+  if (event.target === discoveryDialog) {
+    discoveryDialog.close();
+  }
 });
 
 const quizForm = document.querySelector('#quiz-form');

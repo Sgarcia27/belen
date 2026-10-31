@@ -41,14 +41,17 @@
         <p class="learning-objective"><strong>Objetivo de aprendizaje:</strong> Identificar las principales partes de las plantas (raíz, tallo, hojas, flores y frutos) mediante la observación de imágenes y plantas del entorno, reconociendo sus características y la importancia de cuidarla.</p>
         <p class="intro">Las plantas tienen partes diferentes y cada una hace un trabajo especial. ¡Toca los puntos para descubrirlas!</p>
 
-        <div class="discovery-card" aria-live="polite" aria-atomic="true">
-          <div class="discovery-icon" id="discovery-icon" aria-hidden="true">👋</div>
-          <div>
-            <p class="card-label" id="card-label">¡Tu turno!</p>
-            <h2 id="part-title">¿Qué parte quieres conocer?</h2>
-            <p id="part-description">Elige un punto de la planta y aprende algo nuevo.</p>
+        <dialog class="discovery-dialog" id="discovery-dialog" aria-labelledby="part-title">
+          <button class="discovery-dialog-close" id="close-discovery" type="button" aria-label="Cerrar concepto">×</button>
+          <div class="discovery-card" aria-live="polite" aria-atomic="true">
+            <div class="discovery-icon" id="discovery-icon" aria-hidden="true">👋</div>
+            <div>
+              <p class="card-label" id="card-label">¡Tu turno!</p>
+              <h2 id="part-title">¿Qué parte quieres conocer?</h2>
+              <p id="part-description">Elige un punto de la planta y aprende algo nuevo.</p>
+            </div>
           </div>
-        </div>
+        </dialog>
 
         <p class="little-tip"><span aria-hidden="true">💡</span> ¡Puedes explorar todas las partes!</p>
       </div>
