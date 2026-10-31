@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f8ee">
+  <title>Conoce las partes de una planta</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <section class="welcome-screen" id="welcome-screen" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+    <div class="welcome-card">
+      <img class="welcome-image" src="images/exploradora-bienvenida.png" alt="Pequeña exploradora lista para aprender">
+      <div class="welcome-message">
+        <p class="plant-kicker">¡BIENVENIDOS A AULA VERDE!</p>
+        <h1 id="welcome-title">¡Hola, pequeños exploradores!</h1>
+        <p>Hoy descubriremos el maravilloso mundo de las plantas. Aprenderemos cuáles son sus partes y qué función cumple cada una. ¡Prepárense para observar, descubrir y divertirnos aprendiendo!</p>
+        <p class="welcome-status" id="welcome-status" aria-live="polite">Reproduciendo la bienvenida...</p>
+        <div class="welcome-controls">
+          <button class="welcome-button welcome-replay" id="welcome-replay" type="button" hidden>🔊 Escuchar otra vez</button>
+          <button class="welcome-button welcome-skip" id="welcome-skip" type="button">Continuar a la lección</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Aula Verde, inicio">
+        <span class="brand-icon" aria-hidden="true">🌱</span>
+        <span>Aula Verde</span>
+      </a>
+      <span class="subject-tag"><span aria-hidden="true">✦</span> CIENCIAS NATURALES</span>
+    </header>
+
+    <section class="lesson" aria-labelledby="page-title">
+      <div class="lesson-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> ¡Vamos a explorar!</p>
+        <h1 id="page-title">Las partes<br>de las <span>plantas</span></h1>
+        <p class="learning-objective"><strong>Objetivo de aprendizaje:</strong> Identificar las principales partes de las plantas (raíz, tallo, hojas, flores y frutos) mediante la observación de imágenes y plantas del entorno, reconociendo sus características y la importancia de cuidarla.</p>
+        <p class="intro">Las plantas tienen partes diferentes y cada una hace un trabajo especial. ¡Toca los puntos para descubrirlas!</p>
+
+        <div class="discovery-card" aria-live="polite" aria-atomic="true">
+          <div class="discovery-icon" id="discovery-icon" aria-hidden="true">👋</div>
+          <div>
+            <p class="card-label" id="card-label">¡Tu turno!</p>
+            <h2 id="part-title">¿Qué parte quieres conocer?</h2>
+            <p id="part-description">Elige un punto de la planta y aprende algo nuevo.</p>
+          </div>
+        </div>
+
+        <p class="little-tip"><span aria-hidden="true">💡</span> ¡Puedes explorar todas las partes!</p>
+      </div>
+
+      <div class="plant-card">
+        <div class="plant-heading">
+          <div>
+            <p class="plant-kicker">OBSERVA CON ATENCIÓN</p>
+            <h2>Conoce las partes de la planta</h2>
+          </div>
+          <span class="sun-badge" aria-hidden="true">☀️</span>
+        </div>
+
+        <div class="plant-stage">
+          <img class="plant-illustration" src="images/diagrama-partes-planta.png" alt="Diagrama de una planta con los nombres Flor, Hojas, Tallo, Raíz principal y Raíces secundarias">
+          <button class="plant-part diagram-part diagram-flower" type="button" data-part="flower" aria-label="Conocer la flor" aria-pressed="false">Flor</button>
+          <button class="plant-part diagram-part diagram-leaves" type="button" data-part="leaf" aria-label="Conocer las hojas" aria-pressed="false">Hojas</button>
+          <button class="plant-part diagram-part diagram-stem" type="button" data-part="stem" aria-label="Conocer el tallo" aria-pressed="false">Tallo</button>
+          <button class="plant-part diagram-part diagram-main-root" type="button" data-part="root" aria-label="Conocer la raíz principal" aria-pressed="false"><span>Raíz<br>principal</span></button>
+          <button class="plant-part diagram-part diagram-secondary-roots" type="button" data-part="root" aria-label="Conocer las raíces secundarias" aria-pressed="false"><span>Raíces<br>secundarias</span></button>
+        </div>
+        <p class="stage-caption"><span aria-hidden="true">👆</span> Toca los nombres de la imagen para aprender</p>
+      </div>
+    </section>
+
+    <section class="video-section" aria-labelledby="video-title">
+      <div class="video-copy">
+        <p class="plant-kicker">APRENDE MIRANDO</p>
+        <h2 id="video-title">Un video para aprender jugando</h2>
+        <p>Descubre las partes de las plantas con una explicación pensada para niños.</p>
+      </div>
+      <a class="video-link" href="https://youtu.be/wBjaQuyMr18?si=gqh1n4nPhBfyehTS" target="_blank" rel="noopener noreferrer">
+        <span class="video-play" aria-hidden="true">▶</span>
+        <span>Ver video infantil sobre las partes de las plantas</span>
+        <span class="video-link-arrow" aria-hidden="true">↗</span>
+      </a>
+    </section>
+
+    <section class="quiz-section" id="quiz" aria-labelledby="quiz-title">
+      <header class="quiz-header">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> ¡A demostrar lo que sabes!</p>
+        <h2 id="quiz-title">Reto de las plantas</h2>
+        <p class="quiz-intro">Responde estas 10 preguntas y descubre cuánto aprendiste sobre las partes de las plantas.</p>
+      </header>
+
+      <div class="quiz-mode-picker" role="group" aria-label="Elige cómo quieres hacer el test">
+        <button class="mode-button is-active" type="button" data-mode="online" aria-pressed="true">
+          <span aria-hidden="true">💻</span> Hacer en línea
+        </button>
+        <button class="mode-button" type="button" data-mode="worksheet" aria-pressed="false">
+          <span aria-hidden="true">📝</span> Hacer en hoja
+        </button>
+      </div>
+
+      <p class="mode-hint" id="mode-hint" aria-live="polite">Elige una alternativa en cada pregunta y al final revisa tu puntaje.</p>
+
+      <form class="quiz-form" id="quiz-form">
+        <p class="worksheet-meta"><span>Nombre: ____________________________________</span><span>Fecha: __________________</span></p>
+        <p class="quiz-instructions">Lee cada pregunta y marca una sola alternativa.</p>
+
+        <ol class="question-list">
+          <li>
+            <fieldset class="quiz-question" data-correct="b">
+              <legend>¿Qué parte de la planta absorbe el agua de la tierra?</legend>
+              <label class="answer-option"><input type="radio" name="q1" value="a" required><span>a) La flor</span></label>
+              <label class="answer-option"><input type="radio" name="q1" value="b"><span>b) La raíz</span></label>
+              <label class="answer-option"><input type="radio" name="q1" value="c"><span>c) El fruto</span></label>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset class="quiz-question" data-correct="c">
+              <legend>¿Qué parte sostiene la planta y lleva el agua a las hojas?</legend>
+              <label class="answer-option"><input type="radio" name="q2" value="a" required><span>a) La semilla</span></label>
+              <label class="answer-option"><input type="radio" name="q2" value="b"><span>b) La flor</span></label>
+              <label class="answer-option"><input type="radio" name="q2" value="c"><span>c) El tallo</span></label>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset class="quiz-question" data-correct="a">
+              <legend>¿Qué necesitan las hojas para ayudar a preparar el alimento de la planta?</legend>
+              <label class="answer-option"><input type="radio" name="q3" value="a" required><span>a) Luz del sol, aire y agua</span></label>
+              <label class="answer-option"><input type="radio" name="q3" value="b"><span>b) Solo tierra</span></label>
+              <label class="answer-option"><input type="radio" name="q3" value="c"><span>c) Piedras y arena</span></label>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset class="quiz-question" data-correct="b">
+              <legend>¿Qué parte protege las semillas?</legend>
+              <label class="answer-option"><input type="radio" name="q4" value="a" required><span>a) El tallo</span></label>
+              <label class="answer-option"><input type="radio" name="q4" value="b"><span>b) El fruto</span></label>
+              <label class="answer-option"><input type="radio" name="q4" value="c"><span>c) La raíz</span></label>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset class="quiz-question" data-correct="c">
+              <legend>¿Qué parte colorida puede atraer a las abejas y mariposas?</legend>
+              <label class="answer-option"><input type="radio" name="q5" value="a" required><span>a) La raíz</span></label>
+              <label class="answer-option"><input type="radio" name="q5" value="b"><span>b) El tallo</span></label>
+              <label class="answer-option"><input type="radio" name="q5" value="c"><span>c) La flor</span></label>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset class="quiz-question" data-correct="a">
+              <legend>¿Qué parte sujeta la planta para que se mantenga firme en la tierra?</legend>
+              <label class="answer-option"><input type="radio" name="q6" value="a" required><span>a) La raíz</span></label>
+              <label class="answer-option"><input type="radio" name="q6" value="b"><span>b) La hoja</span></label>
+              <label class="answer-option"><input type="radio" name="q6" value="c"><span>c) El fruto</span></label>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset class="quiz-question" data-correct="b">
+              <legend>¿Por dónde viaja el agua desde la raíz hacia las hojas?</legend>
+              <label class="answer-option"><input type="radio" name="q7" value="a" required><span>a) Por los pétalos</span></label>
+              <label class="answer-option"><input type="radio" name="q7" value="b"><span>b) Por el tallo</span></label>
+              <label class="answer-option"><input type="radio" name="q7" value="c"><span>c) Por el fruto</span></label>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset class="quiz-question" data-correct="c">
+              <legend>¿En qué parte de la planta suelen encontrarse las semillas protegidas?</legend>
+              <label class="answer-option"><input type="radio" name="q8" value="a" required><span>a) En las raíces</span></label>
+              <label class="answer-option"><input type="radio" name="q8" value="b"><span>b) En las hojas</span></label>
+              <label class="answer-option"><input type="radio" name="q8" value="c"><span>c) En el fruto</span></label>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset class="quiz-question" data-correct="a">
+              <legend>¿Cuál de estas partes suele ser verde y recibe la luz del sol?</legend>
+              <label class="answer-option"><input type="radio" name="q9" value="a" required><span>a) Las hojas</span></label>
+              <label class="answer-option"><input type="radio" name="q9" value="b"><span>b) El fruto</span></label>
+              <label class="answer-option"><input type="radio" name="q9" value="c"><span>c) La raíz</span></label>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset class="quiz-question" data-correct="b">
+              <legend>¿Cuál es una función importante de la flor?</legend>
+              <label class="answer-option"><input type="radio" name="q10" value="a" required><span>a) Absorber agua de la tierra</span></label>
+              <label class="answer-option"><input type="radio" name="q10" value="b"><span>b) Ayudar a formar semillas</span></label>
+              <label class="answer-option"><input type="radio" name="q10" value="c"><span>c) Sujetar la planta a la tierra</span></label>
+            </fieldset>
+          </li>
+        </ol>
+
+        <div class="quiz-actions">
+          <button class="primary-button" id="check-answers" type="submit">Revisar mis respuestas <span aria-hidden="true">→</span></button>
+          <button class="primary-button print-button" id="print-quiz" type="button" hidden>Imprimir o guardar como PDF <span aria-hidden="true">↓</span></button>
+          <p class="print-note" id="print-note" hidden>En la ventana de impresión, elige «Guardar como PDF» para descargarlo o selecciona tu impresora.</p>
+        </div>
+        <p class="quiz-feedback" id="quiz-feedback" role="status" aria-live="polite" hidden></p>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <span>Pequeños exploradores, grandes descubrimientos</span>
+      <span aria-hidden="true">🌼 &nbsp; 🌿 &nbsp; 🌼</span>
+    </footer>
+  </main>
+</body>
+</html>
